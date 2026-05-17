@@ -85,10 +85,9 @@ Dashboard must deliver:
 | Task | Owner | Status |
 |---|---|---|
 | Establish NABU technical contact | Daniel | Blocked — waiting on Theresa |
-| Confirm Aug 3 MVP scope in writing + mockup sign-off | Omar + Evangelos | Pending NABU meeting |
-| Confirm tech stack (Leaflet.js) | Chris + Evangelos | Pending NABU tech |
-| Collect full team capacity (name / hrs / days) | Omar + Daniel | In progress — replies incomplete |
-| Define "Europe scope" for dashboard data | Omar + Evangelos | Open |
+| Confirm Aug 3 MVP scope in writing + mockup sign-off | | Pending NABU meeting |
+| Confirm tech stack (Leaflet.js) |  | Pending NABU tech |
+| Collect full team capacity (name / hrs / days) |  | In progress — replies incomplete |
 | Confirm hosting/deployment model | Daniel | Pending NABU |
 | Close open GitHub issues | Evangelos | Blocked on NABU |
 
