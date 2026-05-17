@@ -2,7 +2,6 @@
 
 **Date:** 2026-05-17  
 **Authors:** Omar (co-Lead), Evangelos (co-Lead)  
-**Sources:** Kick-off presentation (March 27), Q&A with Theresa (March 2026), Slack `#nabu-team-dashboard`
 
 ---
 
