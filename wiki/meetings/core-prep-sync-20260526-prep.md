@@ -59,8 +59,11 @@ Decision / notes:
 | GPS precision / privacy rule | Blocked by NABU | |
 | NABU stakeholder/user sparring partners | Blocked by NABU | |
 | Walkthrough existing prototype | Can start now | Vitalii? |
-| MVP mockup/reference | Can start now after scope draft | Owner TBD |
-| MVP data fields | Depends on MVP scope | Chris? |
+| MVP scope draft | Can start now | Evangelos? |
+| MVP mockup | Can start now after scope draft | Evangelos? |
+| MVP scope confirmation | Depends on NABU | Evangelos? |
+| MVP tech stack | Depends on NABU | Evangelos? |
+| MVP data fields | Depends on MVP scope | Omar? |
 | MVP data validation checks | Depends on scientific input | Omar? |
 | MVP data pipeline | Depends on tech stack decision | Chris? |
 | GitHub workflow / DoD | Can start now | Omar + Evangelos? |
@@ -95,7 +98,7 @@ Decision / notes:
 |---|---|---|---|
 | MVP scope draft | 1-page August MVP + out-of-scope list | Evangelos + Omar | Before Thursday |
 | Prototype review | What exists / missing / reusable | Vitalii | Before or during Tuesday |
-| MVP data fields | Minimal GBIF field list + risks | Chris | Draft after Tuesday |
+| MVP data fields | Minimal GBIF field list + risks | Omar | Draft after Tuesday |
 | Data validation checks | First checklist for future updates | Omar | Draft after Tuesday |
 | NABU tech questions | One consolidated question list | Evangelos + Omar | Before NABU tech meeting |
 | GitHub workflow | Lightweight issue/PR/DoD proposal | Omar + Evangelos | Before Thursday |
