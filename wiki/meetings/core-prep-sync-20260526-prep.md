@@ -58,9 +58,9 @@ Decision / notes:
 | GBIF authoritative dataset + update timing | Blocked by NABU | |
 | GPS precision / privacy rule | Blocked by NABU | |
 | NABU stakeholder/user sparring partners | Blocked by NABU | |
-| Prototype review | Can start now | Vitalii? |
-| MVP data fields | Can start now | Chris? |
-| Data validation checks | Can start now | Chris / Omar? |
+| Existing prototype walkthrough | Can start now | Vitalii? |
+| MVP data pipeline | Depends on tech stack decision | Chris? |
+| Data validation checks | Depends on tech stack decision | Omar? |
 | Simple MVP mockup/reference | Can start now after scope draft | Owner TBD |
 | GitHub workflow / DoD | Can start now | Omar + Evangelos? |
 | AI usage guardrails | Can start now | Evangelos + Omar? |
