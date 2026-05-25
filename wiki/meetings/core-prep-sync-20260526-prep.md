@@ -34,6 +34,9 @@ By the end of the meeting, we want:
 | Update process | Manual or semi-automated fallback acceptable for August | |
 | Integration | iFrame-ready direction, final details blocked by NABU tech input | |
 
+## Reference on sample deliverable:
+https://www.nabu.de/tiere-und-pflanzen/aktionen-und-projekte/stunde-der-gartenvoegel/ergebnisse/15767.html  
+
 ### Proposed out of scope for August
 
 - habitat/climate/population-density filters
@@ -60,8 +63,8 @@ Decision / notes:
 | NABU stakeholder/user sparring partners | Blocked by NABU | |
 | Walkthrough existing prototype | Can start now | Vitalii? |
 | MVP scope draft | Can start now | Evangelos + Omar? |
-| MVP mockup | Can start now after scope draft | Evangelos? |
-| MVP scope confirmation | Depends on NABU | Evangelos + Omar? |
+| MVP mockup draft | Can start now after scope draft | Evangelos |
+| MVP scope + mockup confirmation | Depends on NABU | Evangelos + Omar? |
 | MVP tech stack | Depends on NABU | Evangelos? |
 | MVP data fields | Depends on MVP scope | Omar? |
 | MVP data validation checks | Depends on scientific input | Omar? |
@@ -97,8 +100,10 @@ Decision / notes:
 | Work package | Output | Suggested owner | Due / notes |
 |---|---|---|---|
 | MVP scope draft | 1-page August MVP + out-of-scope list | Evangelos + Omar | Before Thursday |
+| MVP mockup draft | Sketch/wireframe | TBD | TBD |
+| Unblock NABU blocks | Establish working conditions with NABU | Evangelos + Omar | TBD |
 | Prototype review | What exists / missing / reusable | Vitalii | Before or during Tuesday |
-| MVP data fields | Minimal GBIF field list + risks | Omar | Draft after Tuesday |
+| MVP data fields | Minimal GBIF field list + risks | TBD | Draft after Tuesday |
 | Data validation checks | First checklist for future updates | Omar | Draft after Tuesday |
 | NABU tech questions | One consolidated question list | Evangelos + Omar | Before NABU tech meeting |
 | GitHub workflow | Lightweight issue/PR/DoD proposal | Omar + Evangelos | Before Thursday |
