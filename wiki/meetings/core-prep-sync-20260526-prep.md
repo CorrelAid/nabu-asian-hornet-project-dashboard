@@ -63,7 +63,7 @@ Decision / notes:
 | NABU stakeholder/user sparring partners | Blocked by NABU | |
 | Walkthrough existing prototype | Can start now | Vitalii? |
 | MVP scope draft | Can start now | Evangelos + Omar? |
-| MVP mockup draft | Can start now after scope draft | Evangelos |
+| MVP mockup draft | Can start now after scope draft | Evangelos? |
 | MVP scope + mockup confirmation | Depends on NABU | Evangelos + Omar? |
 | MVP tech stack | Depends on NABU | Evangelos? |
 | MVP data fields | Depends on MVP scope | Omar? |
