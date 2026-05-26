@@ -28,20 +28,21 @@ By the end of the meeting, we want:
 | Geographic scope | Germany-first for August | |
 | Data source | GBIF data, exact NABU dataset/source still to confirm | |
 | Species | Asian hornet + European hornet; toggle or simple distinction | |
-| Time | One selected year or simple year toggle | |
+| Time | One selected year only as selecting multiple may lead to overstating | |
 | Map data | Observation points with lat/lon, subject to privacy/GDPR rules | |
+| Occurrence | Occurrence of one species at a time only | |
 | Counts | Basic counts, ideally federal-state level if feasible | |
 | Update process | Manual or semi-automated fallback acceptable for August | |
 | Integration | iFrame-ready direction, final details blocked by NABU tech input | |
 
-## Reference on sample deliverable:
+### Reference on sample deliverable:
 https://www.nabu.de/tiere-und-pflanzen/aktionen-und-projekte/stunde-der-gartenvoegel/ergebnisse/15767.html  
 
-### Proposed out of scope for August
+### Proposed OUT of scope for August
 
 - habitat/climate/population-density filters
 - Research-derived analysis layers
-- complex species-overlap logic
+- Overlapping of species on map, species-overlap logic
 - full Europe-wide scope unless NABU confirms it is mandatory
 - fully automated production pipeline if NABU hosting/scheduler is unclear
 - final handover/monitoring setup
