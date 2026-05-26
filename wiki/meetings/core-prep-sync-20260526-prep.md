@@ -92,7 +92,7 @@ Decision / notes:
 |---|---|---|
 | Do we have a project question/task log? | Yes, GitHub Issues/wiki are the working structure. | Answered |
 | What is the August MVP? | Reduced map-first MVP proposed; needs agreement. | Decide in Core Prep |
-| Is August 3 realistic? | Not anymore as scope, mockup, tech stack, active members and working relationship with NABU all NOT there as of May 26 | Proposed answer — validate |
+| Is August 3 realistic? | Not anymore as scope, mockup, tech stack, active members and working relationship with NABU all NOT there as of May 26 with no solid date of resolution | Proposed answer — validate |
 | What is out of scope for August? | Advanced filters, research layers, complex overlap logic, full automation. | Decide in Core Prep |
 | What platform/tools should we use? | Streamlit exists as prototype; Leaflet likely better for NABU handover if confirmed. | Proposed answer — NABU validation needed |
 | Can we pull data directly from GBIF? | Likely yes via script/API/download workflow. | Proposed answer — validate |
