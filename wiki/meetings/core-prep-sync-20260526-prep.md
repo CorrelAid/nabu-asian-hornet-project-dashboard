@@ -100,7 +100,8 @@ Decision / notes:
 | Work package | Output | Suggested owner | Due / notes |
 |---|---|---|---|
 | MVP scope draft | 1-page August MVP + out-of-scope list | Evangelos + Omar | Before Thursday |
-| MVP mockup draft | Sketch/wireframe | TBD | TBD |
+| MVP mockup draft | Sketch/wireframe on GUI interactions | TBD | TBD |
+| MVP tech stack | Development tools and deployment platform | TBD | TBD |
 | Unblock NABU blocks | Establish working conditions with NABU | Evangelos + Omar | TBD |
 | Prototype review | What exists / missing / reusable | Vitalii | Before or during Tuesday |
 | MVP data fields | Minimal GBIF field list + risks | TBD | Draft after Tuesday |
