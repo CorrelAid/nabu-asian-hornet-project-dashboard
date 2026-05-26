@@ -27,6 +27,7 @@ By the end of the meeting, we want:
 | Main product | Interactive map / map-centered dashboard | |
 | Geographic scope | Germany-first for August | |
 | Data source | GBIF data, exact NABU dataset/source still to confirm | |
+| Data acquition | Use of GBIF Get Data Utility for repeatable, quotable batch retrieval | |
 | Species | Asian hornet + European hornet; toggle or simple distinction | |
 | Time | One selected year only as selecting multiple may lead to overstating | |
 | Map data | Observation points with lat/lon, subject to privacy/GDPR rules | |
