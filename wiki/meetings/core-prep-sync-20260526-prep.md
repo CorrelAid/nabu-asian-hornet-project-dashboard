@@ -80,7 +80,7 @@ Decision / notes:
 | MVP tech stack | Depends on NABU | Evangelos? |
 | MVP data fields | Depends on MVP scope | Omar? |
 | MVP data validation checks | Depends on scientific input | Omar? |
-| MVP data pipeline | Depends on tech stack decision | Chris? |
+| MVP data pipeline | Depends on tech stack decision | Vitalii? |
 | GitHub workflow / DoD | Can start now | Omar + Evangelos? |
 | AI usage guardrails | Can start now | Evangelos + Omar? |
 
