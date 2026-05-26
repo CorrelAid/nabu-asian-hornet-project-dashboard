@@ -17,6 +17,9 @@ By the end of the meeting, we want:
 - consolidated NABU technical questions
 - temporary AI/workflow guardrails
 - clear input for Thursday’s broader meeting
+- target (may fail!) timeline for an active, working collaborating relationship with NABU
+- target (may fail!) timeline for a confirmed MVP scope and mockup with NABU
+- target (may fail!) timeline for a confirmed tech stack with NABU
 
 ---
 
@@ -40,14 +43,20 @@ By the end of the meeting, we want:
 ### Reference on sample deliverable:
 https://www.nabu.de/tiere-und-pflanzen/aktionen-und-projekte/stunde-der-gartenvoegel/ergebnisse/15767.html  
 
+### Reference on GBIF Get Data Utility
+https://www.gbif.org/occurrence/search?continent=EUROPE&country=DE&taxon_key=1311527&year=2000,2026
+
+### Reference on Repeatable, Quotable Data Retrieval after Initial Retrieval
+https://www.gbif.org/occurrence/download/0007577-260507073636908
+
 ### Proposed OUT of scope for August
 
-- habitat/climate/population-density filters
+- Habitat/climate/population-density filters
 - Research-derived analysis layers
 - Overlapping of species on map, species-overlap logic
-- full Europe-wide scope unless NABU confirms it is mandatory
-- fully automated production pipeline if NABU hosting/scheduler is unclear
-- final handover/monitoring setup
+- Full Europe-wide scope unless NABU confirms it is mandatory
+- Fully automated production pipeline if NABU hosting/scheduler is unclear
+- Final handover/monitoring setup
 
 Decision / notes:
 
