@@ -92,3 +92,7 @@ When you are done, go back to the terminal and press `Ctrl + C`. This stops the 
 
 - Tested in Firefox. Safari or Chrome may behave differently with the fetch calls.
 - All data is held in memory. Refreshing the page triggers a full reload of all API requests.
+
+## AI usage
+
+AI was used to support the creation of the code files and the mockup-notes.md file.
