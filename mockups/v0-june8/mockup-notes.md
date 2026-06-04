@@ -1,24 +1,70 @@
 # Notes about the first mockup version for June 8 meeting
 
+# Hornet Occurrence Map — Mockup Instructions
+
 ## Running the mockup locally
 
-The map fetches data from external APIs (GBIF, OpenStreetMap, GitHub), so it must be served over HTTP — opening the HTML file directly via `file://` will cause CORS errors.
+The map fetches data from external APIs (GBIF, OpenStreetMap, GitHub), so it must be served over HTTP — opening the HTML file directly by double-clicking it will cause a CORS error and the map will not load. You need to run a simple local server instead. The easiest way is with Python, which comes pre-installed on Mac and Linux.
 
-**Start a local server with Python:**
+---
+
+### Step 1 — Check that Python is installed
+
+**Mac / Linux:** Open the Terminal application. On Mac you can find it by pressing `Cmd + Space` and typing "Terminal".
+
+**Windows:** Open the Start menu and search for "Command Prompt" or "PowerShell".
+
+Type the following and press Enter:
 
 ```bash
-# Navigate to the project folder
-cd path/to/your/project
+python --version
+```
 
-# Python 3
+You should see something like `Python 3.11.2`. If you see `command not found` or an error, download and install Python from [python.org](https://www.python.org/downloads/) and then restart your terminal.
+
+---
+
+### Step 2 — Navigate to the project folder
+
+You need to tell the terminal where your project files are. Type `cd` followed by a space, then the path to the folder.
+
+**The easiest way** is to type `cd ` (with a space after it) and then drag the project folder from Finder (Mac) or File Explorer (Windows) directly into the terminal window. It will fill in the path automatically. Then press Enter.
+
+```bash
+cd path/to/your/project
+```
+
+You can verify you are in the right place by typing `ls` (Mac/Linux) or `dir` (Windows) and pressing Enter — you should see `index.html` listed.
+
+---
+
+### Step 3 — Start the server
+
+Type the following and press Enter:
+
+```bash
 python -m http.server 8000
 ```
 
-Then open your browser at:
+You should see: `Serving HTTP on 0.0.0.0 port 8000`. The terminal will appear to hang — that is normal, it means the server is running.
+
+---
+
+### Step 4 — Open the map
+
+Open any web browser and go to:
 
 ```
 http://localhost:8000/index.html
 ```
+
+The map should load. Data will take 15–30 seconds to appear as it fetches from GBIF.
+
+---
+
+### Step 5 — Stopping the server
+
+When you are done, go back to the terminal and press `Ctrl + C`. This stops the server.
 
 ---
 
