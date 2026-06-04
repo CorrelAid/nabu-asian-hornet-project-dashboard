@@ -11,7 +11,7 @@ const SPECIES = [
 ];
 
 async function loadStates() {
-  const res  = await fetch('https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/main/2_bundeslaender/4_niedrig.geo.json');
+  const res = await fetch('https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/main/2_bundeslaender/4_niedrig.geo.json');
   const data = await res.json();
 
   L.geoJSON(data, {
@@ -46,7 +46,7 @@ async function fetchOccurrences(taxonKey, yearStart = 2000, yearEnd = 2024) {
 
   for (let year = yearStart; year <= yearEnd; year++) {
     const url = `${GBIF_API}?taxonKey=${taxonKey}&country=DE&hasCoordinate=true&year=${year},${year}&limit=300&offset=0`;
-    const res  = await fetch(url);
+    const res = await fetch(url);
     const data = await res.json();
     if (data.results?.length) {
       allResults.push(...data.results);
@@ -71,6 +71,8 @@ function applyFilters() {
   }
 }
 
+const stateCounts = {}; // { stateName: { taxonKey: count } }
+
 async function loadAll() {
   const statusEl = document.getElementById('status');
   const countEl = document.getElementById('count');
@@ -79,13 +81,22 @@ async function loadAll() {
   for (const sp of SPECIES) {
     statusEl.textContent = `Loading ${sp.name}…`;
     const records = await fetchOccurrences(sp.taxonKey);
-  
+
     console.log(records);
     for (const r of records) {
       if (r.decimalLatitude && r.decimalLongitude) {
         const popup = `<b>${sp.name}</b><br>${r.stateProvince || ''}DE<br>${r.year || 'year unknown'}`;
         const marker = makeCircle(r.decimalLatitude, r.decimalLongitude, sp.color, popup);
         allMarkers.push({ marker, taxonKey: sp.taxonKey, year: r.year });
+
+        if (r.stateProvince) {
+          if (!stateCounts[r.stateProvince]) {
+            stateCounts[r.stateProvince] = {};
+            for (const s of SPECIES) stateCounts[r.stateProvince][s.taxonKey] = 0;
+          }
+          stateCounts[r.stateProvince][sp.taxonKey]++;
+        }
+
         total++;
       }
     }
@@ -103,7 +114,7 @@ const speciesControl = L.control({ position: 'topright' });
 speciesControl.onAdd = function () {
   const div = L.DomUtil.create('div');
   div.innerHTML = `<select id="species-select">
-    <option value="all">Both species</option>
+    <option value="all">All</option>
     <option value="1311477">Vespa velutina</option>
     <option value="1311527">Vespa crabro</option>
   </select>`;
@@ -177,10 +188,35 @@ infoControl.onAdd = function () {
 };
 infoControl.addTo(map);
 
-function showStateInfo(props) {
+/* function showStateInfo(props) {
   const div = document.getElementById('state-info');
   div.style.display = 'block';
   div.innerHTML = `<b>${props.NAME_1 || props.name}</b>`;
+} */
+
+function showStateInfo(props) {
+  const name = props.name;
+  const counts = stateCounts[name] || {};
+
+  const rows = SPECIES.map(sp => {
+    const n = counts[sp.taxonKey] ?? 0;
+    return `
+      <tr>
+        <td style="padding: 2px 12px 2px 0; white-space: nowrap;">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;
+            background:${sp.color};margin-right:5px;vertical-align:middle;"></span>
+          ${sp.name}
+        </td>
+        <td style="padding: 2px 0; text-align: right; font-weight: bold;">${n}</td>
+      </tr>`;
+  }).join('');
+
+  document.getElementById('state-info').style.display = 'block';
+  document.getElementById('state-info').innerHTML = `
+    <b style="display:block; margin-bottom: 6px;">${name}</b>
+    <table style="width: 100%; border-collapse: collapse;">
+      ${rows}
+    </table>`;
 }
 
 function hideStateInfo() {
