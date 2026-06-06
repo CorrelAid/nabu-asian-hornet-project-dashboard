@@ -73,13 +73,16 @@ When you are done, go back to the terminal and press `Ctrl + C`. This stops the 
 ### Data
 
 - **Loading time is slow.** The map makes one GBIF API request per year per species (25 years × 2 species = 50 requests on startup). Expect 15–30 seconds before all points appear. Prefetching data points or returning an aggregated result may be desirable in the future. Also depends on the representation and design choices we will go for in the future.  
-- **GBIF caps results at 300 per request.** Each year/species combination returns at most 300 records. High-density years are therefore underrepresented.
+- **live GBIF loading is demo behavior** not production behavior. In a production environment we will aim for a different solution. that has preloaded data ready and updates on an hourly/daily/weekly basis (still needs to be determined)
+- **GBIF caps results at 300 per request.** Each year/species combination returns at most 300 records. This is done for demonstration puropses and should be solved differently in a produciton evnironment. This means that **not all data is being loaded**. High-density years are therefore underrepresented.
 - **`stateProvince` is rarely populated** in GBIF records. State counts in the hover panel will be an undercount for records where this field is missing. Markers that appear on the map may not appear in the accumulated state count. A derived value based on coordinates and the federal state bounderies may work better in a future verison. This should ideally be calculated on the server-side, since it would otherwise increase loading times by a lot.   
 - **Taxon keys used:**
   - *Vespa velutina* (Asian hornet) → `1311477`
   - *Vespa crabro* (European hornet) → `1311527`
 - Data is filtered to Germany (`country=DE`) and records with coordinates only (`hasCoordinate=true`).
 - Year range is currently **2000–2024**.
+- The available timeframes for hornet sightings are currently year based, meaning we can select either a specific year from the year range or all sightings from the year range. This is still part of the demo version and it has not yet been decided whether this is the final representation that we want/need. 
+- The visualization is only showing asian hornet and european hornet sightings, not nest sightings. Is it possible to get nest sighting data from GBIF?
 
 ### Map
 
@@ -87,10 +90,17 @@ When you are done, go back to the terminal and press `Ctrl + C`. This stops the 
 - **State hover counts** reflect all loaded markers regardless of the current species/year filter selection. They do not update dynamically when filters change.
 - The **year filter** only hides/shows already-loaded markers — it does not re-fetch data. All years are loaded on startup.
 - The map is **not mobile optimised**. Controls and the info panel may overlap on small screens.
+- Moving around on the map is already laggy on my testing setup and will only increase with more (all production) data points. 
+
+### Representation
+
+- Each occurrence record is shown as an individual dot on the map, so areas with many sightings appear as dense overlapping clusters
+- Vespa Valutina (Asian Hornet) is drawn on the map first and Vespa Crabro (European Hornet) is drawn second. This makes it hard to make out where the asian hornet occurences are.   
+- Generally the visualization serves as a first discussion point and is not a final design. There are many ways to represent this kind of geographical data on a map and there needs to be a discussion on what we actually want to communicate and how to do that.   
 
 ### Browser
 
-- Tested in Firefox. Safari or Chrome may behave differently with the fetch calls.
+- Tested in Firefox. Safari or Chrome may behave differently with the fetch calls.- Moving around on the ma
 - All data is held in memory. Refreshing the page triggers a full reload of all API requests.
 
 ## AI usage
